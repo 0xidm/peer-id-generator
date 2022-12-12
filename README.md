@@ -9,7 +9,16 @@ like one of them, you can move it to ~/.ipfs/keystore/ to use it with IPFS.
 Install the 0xidm fork of the [meehow repo](https://github.com/meehow/peer-id-generator):
 
 ```
-go install github.com/0xidm/peer-id-generator@latest
+go install github.com/0xidm/peer-id-generator
+```
+
+If your version is too old for that method to work, try the following:
+
+```
+git clone https://github.com/0xidm/peer-id-generator
+cd peer-id-generator
+go build
+go install
 ```
 
 ## Usage
