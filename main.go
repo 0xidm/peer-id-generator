@@ -10,13 +10,13 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/libp2p/go-libp2p-crypto"
-	"github.com/libp2p/go-libp2p-peer"
+	crypto "github.com/libp2p/go-libp2p-crypto"
+	peer "github.com/libp2p/go-libp2p-peer"
 )
 
 var (
 	alphabet   = regexp.MustCompile("^[123456789abcdefghijklmnopqrstuvwxyz]+$")
-	numWorkers = runtime.NumCPU()
+	numWorkers = runtime.NumCPU() - 1
 )
 
 // Key stores PrettyID containing desired substring at Index
