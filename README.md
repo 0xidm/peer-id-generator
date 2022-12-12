@@ -6,12 +6,13 @@ like one of them, you can move it to ~/.ipfs/keystore/ to use it with IPFS.
 
 ## Installation
 
+Install the 0xidm fork of the [meehow repo](https://github.com/meehow/peer-id-generator):
+
 ```
-go install github.com/meehow/peer-id-generator@latest
+go install github.com/0xidm/peer-id-generator@latest
 ```
 
 ## Usage
-
 
 ➜  ~ peer-id-generator **dupa**
 
@@ -29,8 +30,6 @@ go install github.com/meehow/peer-id-generator@latest
 
 Published to 12D3KooWMJm**DUPA**tjcaHo8LARo5VHQ5uSxrt8Mdi5fytiRnnfD2f: {ipfs-path}
 
-
-
 ## Examples
 
 In [examples](examples) you can find key pairs which contain word "funny"
@@ -42,6 +41,10 @@ Please consider these private keys as already leaked.
 This tool is using [Ed25519](https://godoc.org/golang.org/x/crypto/ed25519)
 algorithm because it is able to generate keys **2500 times faster**
 than [RSA](https://godoc.org/crypto/rsa) and both can work with IPFS.
+
+> *note from idm:*
+> This 0xidm fork makes trivial changes that should not affect performance.
+> The original code by meehow has the following benchmark profile:
 
 ```
 goos: linux
